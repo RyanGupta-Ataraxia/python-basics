@@ -19,8 +19,4 @@ def divide(a, b):
         return None
     return a / b
 
-def factorial(n):
-    """Return factorial of a number."""
-    if n == 0 or n == 1:
-        return 1
-    return n * factorial(n - 1)
+
