@@ -53,24 +53,22 @@ elif choice == "3":
     print("Merging example dictionaries:", merge_dicts(d1, d2))
 
 elif choice == "4":
-    num1 = input("Enter first number")
-    num2 = input("Enter secondnumber")
+    num1 = input(int("Enter first number"))
+    num2 = input(int("Enter second number"))
     print(" 1. Add numbers")
     print(" 2. Subtract numbers")
     print(" 3. Multiply numbers")
     print(" 4. Divide numbers")
-    print(" 5. Factorial of numbers")
     func = input ("Enter your choice: ")
     if func == "1":
-        print (add(num1, num2)
+        print (add(num1, num2))
     elif func == "2":
         print(subtract(num1, num2))
     elif func == "3":
         print(multiply(num1, num2))
     elif func == "4":
-        print(divide(num1, num2))
-    elif func == "5":
-        print(factorial(num1, num2))
+        print(divide(num1))
+ 
 
 else:
     print("Invalid choice. Try again.")
