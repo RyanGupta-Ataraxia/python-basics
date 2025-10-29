@@ -14,9 +14,12 @@ def multiply(a, b):
     return a * b
 
 def divide(a, b):
-    """Return division of two numbers. Returns None if dividing by zero."""
-    if b == 0:
-        return None
-    return a / b
-
+    """Safely divide two numbers with error handling."""
+    try:
+        a, b = float(a), float(b)
+        return a / b
+    except ValueError:
+        return "Error: Please enter valid numbers."
+    except ZeroDivisionError:
+        return "Error: Cannot divide by zero."
 
