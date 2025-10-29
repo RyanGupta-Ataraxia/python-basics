@@ -53,23 +53,34 @@ elif choice == "3":
     print("Merging example dictionaries:", merge_dicts(d1, d2))
 
 elif choice == "4":
-    num1 = input(int("Enter first number"))
-    num2 = input(int("Enter second number"))
-    print(" 1. Add numbers")
-    print(" 2. Subtract numbers")
-    print(" 3. Multiply numbers")
-    print(" 4. Divide numbers")
-    func = input ("Enter your choice: ")
-    if func == "1":
-        print (add(num1, num2))
-    elif func == "2":
-        print(subtract(num1, num2))
-    elif func == "3":
-        print(multiply(num1, num2))
-    elif func == "4":
-        print(divide(num1))
- 
+    num1 = input("Enter first number: ")
+    num2 = input("Enter second number: ")
+
+    # Validate numeric input (allow floats)
+    if not num1.replace('.', '', 1).lstrip('-').isdigit() or not num2.replace('.', '', 1).lstrip('-').isdigit():
+        print("Invalid input! Please enter valid numbers (e.g., 12 or 3.5).")
+    else:
+        num1 = float(num1)
+        num2 = float(num2)
+
+        print("1. Add numbers")
+        print("2. Subtract numbers")
+        print("3. Multiply numbers")
+        print("4. Divide numbers")
+        func = input("Enter your choice: ")
+
+        if func == "1":
+            print(add(num1, num2))
+        elif func == "2":
+            print(subtract(num1, num2))
+        elif func == "3":
+            print(multiply(num1, num2))
+        elif func == "4":
+            print(divide(num1, num2))
+        else:
+            print("Invalid math choice.")
+
+    
 
 else:
     print("Invalid choice. Try again.")
-
