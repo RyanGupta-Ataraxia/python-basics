@@ -14,13 +14,11 @@ def multiply(a, b):
     return a * b
 
 def divide(a, b):
-    """Return division of two numbers. Returns None if dividing by zero."""
-    if b == 0:
-        return None
-    return a / b
-
-def factorial(n):
-    """Return factorial of a number."""
-    if n == 0 or n == 1:
-        return 1
-    return n * factorial(n - 1)
+    """Safely divide two numbers with error handling."""
+    try:
+        a, b = float(a), float(b)
+        return a / b
+    except ValueError:
+        return "Error: Please enter valid numbers."
+    except ZeroDivisionError:
+        return "Error: Cannot divide by zero."
