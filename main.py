@@ -83,8 +83,3 @@ elif choice == "4":
     
 
 else:
-<<<<<<< HEAD
-    print("Invalid choice. Try again.")
-=======
-    print("Invalid choice. Try again.")
->>>>>>> 039c483f125c6d746f85ca92c8f860b952e05b0a
