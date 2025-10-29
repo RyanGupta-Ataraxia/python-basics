@@ -22,3 +22,7 @@ def divide(a, b):
         return "Error: Please enter valid numbers."
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
+<<<<<<< HEAD
+=======
+
+>>>>>>> 039c483f125c6d746f85ca92c8f860b952e05b0a
