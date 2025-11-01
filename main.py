@@ -2,6 +2,7 @@ from functions.string_functions import *
 from functions.list_functions import *
 from functions.dictionary_functions import *
 from functions.math_functions import*
+from functions.file_functions import*
 
 print("Welcome to Ryan Gupta’s Python Basics Toolkit!")
 print("Choose a category:")
@@ -9,8 +10,9 @@ print("1. String functions")
 print("2. List functions")
 print("3. Dictionary functions")
 print("4. Math functions")
+print("5. File functions")
 
-choice = input("Enter 1, 2,3 or 4: ")
+choice = input("Enter 1, 2,3,4 or 5: ")
 
 if choice == "1":
     text = input("Enter a string: ")
@@ -80,6 +82,26 @@ elif choice == "4":
         else:
             print("Invalid math choice.")
 
+elif choice == "5":
+    filename = input("Enter filename: ")
+    print("1. Write to file")
+    print("2. Read from file")
+    print("3. Append to file")
+    func = input("Enter your choice: ")
+
+    if func == "1":
+        content = input("Enter content to write: ")
+        print(write_to_file(filename, content))
+    elif func == "2":
+        print(read_from_file(filename))
+    elif func == "3":
+        content = input("Enter content to append: ")
+        print(append_to_file(filename, content))
+           
+
     
 
 else:
+    print("Invalid choice. Try again.")
+
+   
