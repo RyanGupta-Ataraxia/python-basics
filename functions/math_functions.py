@@ -2,7 +2,8 @@
 # Essential math functions
 
 def add(a, b):
-    """Return the sum of two numbers."""
+    if not (isinstance(a, (int, float)) and isinstance(b, (int, float))):
+         return "Error: Both inputs must be numbers." 
     return a + b
 
 def subtract(a, b):
