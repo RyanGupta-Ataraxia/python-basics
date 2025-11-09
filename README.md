@@ -13,19 +13,13 @@ To build a clean, beginner-friendly Python reference library while learning step
 *(This is the roadmap for this repository, documenting daily progress and future goals.)*
 
 
-from datetime import date
-from textwrap import dedent
-
-plan_md = dedent(f"""
-# 🧭 Python Basics Toolkit — 30-Day Plan
 
 **Author:** Ryan Gupta  
-**Start Date:** {date.today().strftime('%B %d, %Y')}  
 **Goal:** Build a complete beginner-to-intermediate Python toolkit and portfolio.
 
 ---
 
-## ✅ Completed So Far
+## ✅ Phase 1
 | Day | Focus | Description |
 |-----|--------|-------------|
 | 1–2 | Setup | Created GitHub repo, VS Code setup, commit practice |
@@ -79,10 +73,3 @@ plan_md = dedent(f"""
 ✅ Strong foundation for intermediate Python (OOP, APIs, libraries)
 
 ---
-
-> 
-
-with open("/mnt/data/30_day_plan.md", "w", encoding="utf-8") as f:
-    f.write(plan_md)
-
-"/mnt/data/30_day_plan.md"
